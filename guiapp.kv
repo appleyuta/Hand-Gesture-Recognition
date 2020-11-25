@@ -1,0 +1,336 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+        Label:
+            id: label1
+            font_size: sp(45)
+            text: "Gesture Recognition System"
+            size_hint_y: 0.1
+        BoxLayout:
+            Button:
+                text: 'Start'
+                font_size: sp(68)
+                on_release:
+                    root.manager.current = 'exec'
+                    root.manager.transition.direction = 'left'
+            Button:
+                text: 'Setting'
+                font_size: sp(68)
+                on_release:
+                    root.manager.current = 'setting'
+                    root.manager.transition.direction = 'left'
+
+
+<SettingScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+
+        Button:
+            text: 'back'
+            font_size: sp(25)
+            on_release:
+                root.manager.current = 'main'
+                root.manager.transition.direction = 'right'
+
+        Button:
+            text: '赤外線登録'
+            font_size: sp(68)
+            on_release: 
+                root.manager.current = 'irregister'
+                root.manager.transition.direction = 'left'
+        Button:
+            text: 'ジェスチャ登録'
+            font_size: sp(68)
+            on_release:
+                root.manager.current = 'gesregister'
+                root.manager.transition.direction = 'left'
+        Button:
+            text: '環境設定'
+            font_size: sp(68)
+            on_release:
+                root.manager.current = 'envsetting'
+                root.manager.transition.direction = 'left'
+
+<SelectableLabel>:
+    # Draw a background to indicate selection
+    canvas.before:
+        Color:
+            rgba: (.0, 0.9, .1, .3) if self.selected else (0, 0, 0, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<Sfondo_tabella>:
+    # Draw a background to indicate selection 
+    canvas.before: 
+        Color: 
+            rgba: (.0, 0.9, .1, .3) if self.selected else (0, 0, 0, 1) 
+        Rectangle: 
+            pos: self.pos 
+            size: self.size 
+    # Draw a background to indicate selection
+    #color: 0,0,0,1
+    #font_size:  self.height * 0.5
+    #text_size: self.width, None
+    #valign: 'top'
+    #halign: 'center'
+
+    #canvas.before:
+    #    Color:
+    #        rgba: (1, 1, 1, 1)
+    #    Rectangle:
+    #        pos: self.pos
+    #        size: self.size
+    #canvas:
+    #    Color:
+    #        rgba:0,0,0,1
+    #    Line:
+    #        width:0.5
+    #        rectangle:(self.x,self.y,self.width,self.height)
+
+
+
+<InfraredRegisterScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+
+        Label:
+            font_size: sp(68)
+            text: '赤外線登録'
+            size_hint_y: 0.2
+        Button:
+            text: 'back'
+            font_size: sp(25)
+            size_hint_y: 0.1
+            on_release:
+                root.manager.current = 'setting'
+                root.manager.transition.direction = 'right'
+        
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.1
+            Label:
+                font_size: sp(20)
+                text: '登録名'
+                #size_hint_y: 0.3
+            TextInput:
+                id: register_name
+                text: ''
+                #multiline: False
+                #size_hint_y: 0.3
+        
+        Button:
+            text: '登録'
+            font_size: sp(68)
+            size_hint_y: 0.3
+            on_release: root.irRegister()
+
+        Label:
+            font_size: sp(25)
+            text: '登録済み赤外線信号一覧'
+            size_hint_y: 0.1
+
+
+        RV:
+            id: datatable
+            size_hint_y: 1.0
+            row_default_height: 300
+            data: [{'text':str(i)} for i in root.rows]
+            viewclass: "SelectableLabel"
+            cols: 2
+            SelectableRecycleGridLayout:
+                id: intable
+                cols: 2
+                default_size: None, dp(40)
+                default_size_hint: 1, None
+                size_hint_y: None
+                height: self.minimum_height
+                width: self.minimum_width
+                orientation: 'vertical'
+                multiselect: True
+                touch_multiselect: True
+        
+        Button:
+            font_size: sp(30)
+            text: '選択された項目を削除'
+            size_hint_y: 0.15
+            on_release: root.deletecheck()
+        
+<MessagePopup>:
+    anchor_x: 'center'
+    anchor_y: 'center'
+    pos_hint: {'center_x':1,'center_y':1}
+    Label:
+        text: root.title
+    BoxLayout:
+        Button:
+            text: 'Popup'
+            on_release: root.popup_open()
+
+<PopupMenu>:
+    orientation: 'vertical'
+    Label:
+        text: root.text
+        center: root.center
+    BoxLayout:
+        Button:
+            text: 'Ok'
+            on_release: root.popup_close()
+
+<PopupYesNo>:
+    orientation: 'vertical'
+    Label:
+        text: root.text
+        center: root.center
+    BoxLayout:
+        Button:
+            text: 'Yes'
+            on_release: root.setYes(), root.popup_close()
+        Button:
+            text: 'No'
+            on_release: root.setNo(), root.popup_close()
+
+
+
+<GestureRegisterScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+
+        Label:
+            text: 'ジェスチャ登録'
+            font_size: sp(68)
+            size_hint_y: 0.25
+
+        Button:
+            text: 'back'
+            font_size: sp(25)
+            size_hint_y: 0.15
+            on_release:
+                root.manager.current = 'setting'
+                root.manager.transition.direction = 'right'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.25
+            Label:
+                text: '赤外線名'
+                font_size: sp(20)
+                #size_hint_y: 0.1
+            CustomSpinner:
+                id: ir_name
+                size_hint_y: None
+                size: sp(100), sp(50)
+                #pos_hint: {'y': .1}
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                #text: 'zero'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.25
+            Label:
+                text: 'ジェスチャクラス'
+                font_size: sp(20)
+            Spinner:
+                id: class_name
+                size_hint_y: None
+                size: sp(100), sp(50)
+                #pos_hint: {'y': .1}
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                text: 'zero'
+                values: 'zero', 'one', 'two', 'three', 'four', 'five', 'three_v2', 'fit', 'fox', 'ok', 'go', 'little_finger'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.25
+            Label:
+                text: 'ジェスチャ動作'
+                font_size: sp(20)
+            Spinner:
+                id: move_name
+                size_hint_y: None
+                size: sp(100), sp(50)
+                #pos_hint: {'y': .1}
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                text: 'stop'
+                values: 'stop', 'up', 'down', 'right', 'left'
+        
+        Button:
+            text: '登録'
+            font_size: sp(68)
+            size_hint_y: 0.3
+            on_release: root.Register()
+        
+        Label:
+            text: '登録済みジェスチャ一覧'
+            font_size: sp(25)
+            size_hint_y: 0.15
+
+        RV:
+            id: datatable
+            size_hint_y: 1.0
+            row_default_height: 300
+            data: [{'text':str(i)} for i in root.rows]
+            viewclass: "SelectableLabel"
+            cols: 4
+            SelectableRecycleGridLayout:
+                id: intable
+                cols: 4
+                default_size: None, dp(40)
+                default_size_hint: 1, None
+                size_hint_y: None
+                height: self.minimum_height
+                width: self.minimum_width
+                orientation: 'vertical'
+                multiselect: True
+                touch_multiselect: True
+        
+        Button:
+            text: '選択された項目を削除'
+            font_size: sp(30)
+            size_hint_y: 0.15
+            on_release: root.deletecheck()
+
+
+<EnvironmentSettingScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+
+        Label:
+            text: '環境設定'
+            font_size: sp(68)
+            size_hint_y: 0.1
+
+        Button:
+            text: 'back'
+            font_size: sp(25)
+            on_release:
+                root.manager.current = 'setting'
+                root.manager.transition.direction = 'right'
+
+
+<ExecuteScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Image:
+            id: camera
+            #size_hint: None, None
+            size_hint_y: 0.7
+            size: 600, 400
+        
+        ToggleButton:
+            id: btn
+            text: 'Play'
+            on_release: root.play()
+            size_hint_y: 0.15
+            font_size: sp(68)
+            #height: '48dp'
+        Button:
+            text: 'Exit'
+            font_size: sp(68)
+            size_hint_y: 0.15
+            on_release:
+                root.manager.current = 'main'
+                root.manager.transition.direction = 'right'
