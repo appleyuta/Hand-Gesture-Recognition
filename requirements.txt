@@ -1,0 +1,9 @@
+Kivy
+kivy-deps.glew
+kivy-deps.gstreamer
+kivy-deps.sdl2
+Kivy-Garden
+japanize-kivy
+numpy
+pyserial
+pillow
