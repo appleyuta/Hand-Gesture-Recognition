@@ -2,7 +2,8 @@
 Hand Gestureを用いた家電操作アプリです。
 
 ## デモ
-coming soon
+guiapp.pyの実行デモ
+(https:/github.com/appleyuta/Hand-Gesture-Recognition/blob/demo.gif)
 
 ## 使用方法
 アプリケーションは2種類用意されています。
