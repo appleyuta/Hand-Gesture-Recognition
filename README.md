@@ -3,7 +3,7 @@ Hand Gestureを用いた家電操作アプリです。
 
 ## デモ
 guiapp.pyの実行デモ
-![result](https:/github.com/appleyuta/Hand-Gesture-Recognition/blob/demo.gif)
+![result](https:/github.com/appleyuta/Hand-Gesture-Recognition/blob/main/demo.gif)
 
 ## 使用方法
 アプリケーションは2種類用意されています。
