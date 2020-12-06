@@ -50,8 +50,6 @@ class RegisterFrame(tk.Frame):
         #ここで所定の登録作業を実行する
         thread1 = threading.Thread(target=self.thread_register)
         thread1.start()
-        #self.pack_forget()
-        #self.parent.pack()
     
     def thread_register(self):
         target_id = 5*self.cls_label2idx[self.class_name.get()]+self.move_label2idx[self.move_name.get()]
@@ -64,7 +62,6 @@ class RegisterFrame(tk.Frame):
         connection = sqlite3.connect(dbpath)
         cursor = connection.cursor()
         try:
-            #cursor.execute("DROP TABLE IF EXISTS sample")
             cursor.execute("CREATE TABLE IF NOT EXISTS sample (id INTEGER PRIMARY KEY, irname TEXT,postscale INTEGER, freq INTEGER, data TEXT,format TEXT,target_id INTEGER)")
             cursor.execute("UPDATE sample SET target_id = :target_id where id = :id",{"id":pkey_id,"target_id":target_id})
         except sqlite3.Error as e:

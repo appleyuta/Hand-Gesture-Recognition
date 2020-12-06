@@ -29,3 +29,7 @@ class CustomSpinner(Spinner):
                 return res
             else:
                 return ['']
+
+    def update(self):
+        self.values = self.get_data(load_id=False)
+        self.text = self.values[0]

@@ -67,9 +67,8 @@ class InfraredSignalRegisterFrame(tk.Frame):
         self.tree.place(anchor=tk.CENTER,x=300,y=300)
         self.delete_button.place(anchor=tk.CENTER,x=300,y=500)
         self.pack()
-    
+        
     def Back(self):
-        #self.serial_close()
         self.pack_forget()
         self.parent.pack()
 
@@ -97,10 +96,8 @@ class InfraredSignalRegisterFrame(tk.Frame):
                 messagebox.showinfo("確認","既に登録されている登録名です。\n重複しない登録名を入力してください。")
                 return
         newWindow = CountWindow(self)
-        #print(self.master.geometry())
         geo = self.master.geometry()
         geo = geo.split("+")
-        #print(geo[1],geo[2])
         x = int(geo[1])+160
         y = int(geo[2])+160
         newWindow.geometry("+"+str(x)+"+"+str(y))
@@ -110,15 +107,12 @@ class InfraredSignalRegisterFrame(tk.Frame):
         time.sleep(3.0)
         msg = ir_serial.readline()
         print(msg)
-        #name = self.register_name.get()
         if name and not "Time Out" in str(msg):
-            #newWindow.after_cancel(newWindow.id)
             newWindow.register_waiting()
             self.saveIR(name)
             newWindow.destroy()
             self.tree_update()
         else:
-            #newWindow.after_cancel(newWindow.id)
             newWindow.destroy()
             messagebox.showinfo("確認","タイムアウトしました")
 
@@ -161,9 +155,7 @@ class InfraredSignalRegisterFrame(tk.Frame):
         connection = sqlite3.connect(dbpath)
         cursor = connection.cursor()
         try:
-            #cursor.execute("DROP TABLE IF EXISTS sample")
             cursor.execute("CREATE TABLE IF NOT EXISTS sample (id INTEGER PRIMARY KEY, irname TEXT,postscale INTEGER, freq INTEGER, data TEXT,format TEXT,target_id INTEGER)")
-            #cursor.execute("INSERT INTO sample VALUES (:id, :irname, :postscale, :freq, :data, :format)",{"id":pkey_id,"irname":self.register_name.get(),"postscale":postScale,"freq":38,"data":rawX_str[:-1],"format":"raw"})
             cursor.execute("INSERT INTO sample(irname, postscale, freq, data, format) VALUES (:irname, :postscale, :freq, :data, :format)",{"irname":name,"postscale":postScale,"freq":38,"data":rawX_str[:-1],"format":"raw"})
         except sqlite3.Error as e:
             print("sqlite3.Error occured:",e.args[0])

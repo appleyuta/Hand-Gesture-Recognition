@@ -12,9 +12,7 @@ class ExecuteFrame(tk.Frame):
         self.label.grid()
         self.button = tk.Button(self,text="Stop",font=font.Font(size=30),command=self.Stop)
         self.button.grid()
-        #self.pack()
         self.parent = start_f #StartFrame
-        #self.model = YOLO(exec_f=self,use_device="CPU")
         self.model = yolo_obj
         self.model.set_exec_f(self)
         self.checker = None
@@ -22,18 +20,14 @@ class ExecuteFrame(tk.Frame):
     
     def Start(self):
         self.pack()
-        #self.model = YOLO(exec_f=self,use_device="CPU")
         self.model.stop = False
         self.model.exec_model()
 
     def Stop(self):
         if self.model != None:
             self.model.stop = True
-        #cv2.destroyAllWindows()
         self.pack_forget()
         self.parent.pack()
-        #del self.model
-        #self.model = None
     
     def update(self):
         if self.checker != self.model.img:

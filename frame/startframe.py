@@ -15,7 +15,7 @@ class StartFrame(tk.Frame):
         self.label.place(anchor=tk.CENTER,x=300,y=30)
         self.start_button.place(anchor=tk.CENTER,x=300,y=200,width=250,height=200)
         self.set_button.place(anchor=tk.CENTER,x=300,y=400,width=250,height=200)
-
+        
     #ジェスチャ認識を実行
     def Start(self):
         self.pack_forget()

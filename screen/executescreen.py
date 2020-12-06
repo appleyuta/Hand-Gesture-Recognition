@@ -4,14 +4,13 @@ from kivy.graphics.texture import Texture
 from kivy.clock import Clock
 
 flgPlay = False
-flgFace = False
-flgMosaic = False
+#flgFace = False
+#flgMosaic = False
 import cv2
 
 class ExecuteScreen(Screen):
     def __init__(self,**kwargs):
         super(ExecuteScreen,self).__init__(**kwargs)
-        #camera = self.ids['camera']
         image_texture = Texture.create(size=(600, 400), colorfmt='bgr')
         self.ids['camera'].texture = image_texture
     def build(self):
@@ -30,7 +29,6 @@ class ExecuteScreen(Screen):
             self.ids.btn.text = 'Play'
             Clock.unschedule(self.update)
             self.image_capture.release()
-            #yolo_obj.stop = True
     
     def update(self, dt):
         ret, frame = self.image_capture.read()

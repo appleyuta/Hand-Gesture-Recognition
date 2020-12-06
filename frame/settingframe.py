@@ -18,26 +18,22 @@ class SettingFrame(tk.Frame):
         self.env_button.place(anchor=tk.CENTER,x=300,y=450,width=400,height=150)
         self.parent = start_f #StratFrame
         self.pack()
-
+        
     #ホーム画面へ移行
     def Back(self):
         self.pack_forget()
         self.parent.pack()
-        #self.start_frame.pack() ?
-    
+        
     def InfraredSignalRegister(self):
         self.pack_forget()
         threading.Thread(target=InfraredSignalRegisterFrame,args=(self,)).start()
-        #2InfraredSignalRegisterFrame(setting_f=self)
-
+        
     #ジェスチャ登録画面へ移行
     def Register(self):
         self.pack_forget()
         threading.Thread(target=RegisterFrame,args=(self,)).start()
-        #RegisterFrame(setting_f=self)
-
+        
     #環境設定画面へ移行
     def Environment(self):
         self.pack_forget()
         threading.Thread(target=EnvironmentFrame,args=(self,)).start()
-

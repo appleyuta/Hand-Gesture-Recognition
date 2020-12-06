@@ -16,7 +16,6 @@ class GUIAPP(tk.Tk):
         self.geometry("600x600")
         self.resizable(width = False,height = False)
         self.start_frame = StartFrame(self)
-        #self.start_frame = InfraredSignalRegisterFrame(self)
         self.start_frame.pack()
     
     def GUIStart(self):
