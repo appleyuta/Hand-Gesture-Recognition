@@ -29,11 +29,11 @@ UnicodeDecodeError: 'cp932' codec can't decode byte 0x83 in position 1478: illeg
 site-packages/kivy/lang/builder.pyの288行目を以下のように書き換え
 
 修正前
-`with open(filename, 'r') as fd:
-    kwargs['filename'] = filename
+`with open(filename, 'r') as fd:  
+    kwargs['filename'] = filename  
     data = fd.read()`
 
 修正後
-`with open(filename, 'r', encoding='utf8') as fd:
-    kwargs['filename'] = filename
+`with open(filename, 'r', encoding='utf8') as fd:  
+    kwargs['filename'] = filename  
     data = fd.read()`
