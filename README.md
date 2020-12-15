@@ -21,6 +21,7 @@ MNSYと代表的なネットワークの比較を以下に示す。
 mAPに関してはCOCO mAPを使用し、学習データはCreative Senz3d Dataset及び自前で集めた画像、合計33,000枚を用いた。速度計測にはCPUにCore i9-8950HK、OpenVINOのIRモデルを使用した。
 
 |Model|Params|Model Size|mAP|Inference Speed|
+|:---|:---|:---|:---|:---|
 |Tiny-YOLOv3|8.7M|33.2MB|81.26|41.84fps|
 |MobileNetV3+SSDLite|**1.5M**|**6.0MB**|75.04|**193.94fps**|
 |MNSY|2.4M|9.2MB|**84.75**|107.06fps|
