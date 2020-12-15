@@ -18,7 +18,7 @@ Head : **Depthwise Separable Convolution**
 
 ## MNSYの有効性
 MNSYと代表的なネットワークの比較を以下に示す。  
-mAPに関してはCOCO mAPを使用し、学習データはCreative Senz3d Dataset及び自前で集めた画像、合計33,000枚を用いた。速度計測にはCPUにCore i9-8950HK、OpenVINOのIRモデルを使用した。
+mAPに関してはCOCO mAPを使用し、学習データは[Creative Senz3d Dataset](https://lttm.dei.unipd.it/downloads/gesture/)及び自前で集めた画像、合計33,000枚を用いた。速度計測にはCPUにCore i9-8950HK、OpenVINOのIRモデルを使用した。
 
 |Model|Params|Model Size|mAP|Inference Speed|
 |:---|:---|:---|:---|:---|
