@@ -1,0 +1,1691 @@
+<?xml version="1.0" ?>
+<mapping>
+	<map>
+		<framework name="conv_pw_pred_3_3/Conv2D" out_port_id="0"/>
+		<IR id="612" name="conv_pw_pred_3_3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/BiasAdd" out_port_id="0"/>
+		<IR id="228" name="expanded_conv_6/squeeze_excite/Conv/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/Conv2D" out_port_id="0"/>
+		<IR id="54" name="expanded_conv_2/expand/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D" out_port_id="0"/>
+		<IR id="550" name="predict_conv_2/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_8/activation_9/add" out_port_id="0"/>
+		<IR id="73" name="activation_8/activation_9/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/Conv2D" out_port_id="0"/>
+		<IR id="243" name="expanded_conv_7/expand/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="427" name="batch_normalization/FusedBatchNorm/mean/Fused_Mul_1823818240_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="reshape_5/Reshape/shape" out_port_id="0"/>
+		<IR id="264" name="reshape_5/Reshape/Cast_128471_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_32/add" out_port_id="0"/>
+		<IR id="276" name="expanded_conv_7/squeeze_excite/Conv_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="242" name="expanded_conv_7/expand/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1818618188_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_22/re_lu_15/Relu6" out_port_id="0"/>
+		<IR id="190" name="activation_22/re_lu_15/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_7/re_lu_6/Relu" out_port_id="0"/>
+		<IR id="62" name="activation_7/re_lu_6/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="506" name="conv_dw_pred_2_1_leaky_relu/LeakyRelu23482" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_30/activation_31/add" out_port_id="0"/>
+		<IR id="257" name="activation_30/activation_31/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_48/activation_49/re_lu_31/Relu6" out_port_id="0"/>
+		<IR id="423" name="activation_48/activation_49/re_lu_31/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_37/mul" out_port_id="0"/>
+		<IR id="323" name="activation_37/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_4/Conv2D" out_port_id="0"/>
+		<IR id="496" name="conv2d_4/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="concatenate/concat" out_port_id="0"/>
+		<IR id="494" name="concatenate/concat" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="575" name="conv_pw_pred_3_1_bn/FusedBatchNorm/mean/Fused_Mul_1832618328_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="469" name="2779027793_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="reshape/Reshape/shape" out_port_id="0"/>
+		<IR id="18" name="reshape/Reshape/Cast_128389_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="580" name="conv_pw_pred_3_1_leaky_relu/LeakyRelu23546" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/AvgPool/Mean" out_port_id="0"/>
+		<IR id="176" name="expanded_conv_5/squeeze_excite/AvgPool/Mean" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/Conv2D" out_port_id="0"/>
+		<IR id="413" name="expanded_conv_10/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_12/re_lu_9/Relu6" out_port_id="0"/>
+		<IR id="103" name="activation_12/re_lu_9/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/project/Conv2D" out_port_id="0"/>
+		<IR id="36" name="expanded_conv/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Relu/Relu" out_port_id="0"/>
+		<IR id="185" name="expanded_conv_5/squeeze_excite/Relu/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_33/activation_34/add" out_port_id="0"/>
+		<IR id="291" name="activation_33/activation_34/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_18/multiply_5/mul" out_port_id="0"/>
+		<IR id="164" name="activation_18/multiply_5/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_13/activation_14/re_lu_10/Relu6" out_port_id="0"/>
+		<IR id="117" name="activation_13/activation_14/re_lu_10/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="66" name="expanded_conv_2/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/Add/add" out_port_id="0"/>
+		<IR id="372" name="expanded_conv_9/Add/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_35/activation_36/re_lu_23/Relu6" out_port_id="0"/>
+		<IR id="302" name="activation_35/activation_36/re_lu_23/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="181" name="expanded_conv_5/squeeze_excite/Conv/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="142" name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_33/activation_34/re_lu_22/Relu6" out_port_id="0"/>
+		<IR id="292" name="activation_33/activation_34/re_lu_22/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu_9/LeakyRelu" out_port_id="0"/>
+		<IR id="586" name="leaky_re_lu_9/LeakyRelu23466" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Mul/mul" out_port_id="0"/>
+		<IR id="280" name="expanded_conv_7/squeeze_excite/Mul/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_43/activation_44/mul" out_port_id="0"/>
+		<IR id="381" name="activation_43/activation_44/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1/Conv2D" out_port_id="0"/>
+		<IR id="440" name="conv_pw_pred_1_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="39" name="expanded_conv_1/expand/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1811418116_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="28" name="expanded_conv/squeeze_excite/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_8/activation_9/re_lu_7/Relu6" out_port_id="0"/>
+		<IR id="74" name="activation_8/activation_9/re_lu_7/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/Conv2D" out_port_id="0"/>
+		<IR id="23" name="expanded_conv/squeeze_excite/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_2/Conv2D" out_port_id="0"/>
+		<IR id="464" name="conv2d_2/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="batch_normalization/FusedBatchNorm" out_port_id="0"/>
+		<IR id="430" name="batch_normalization/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="578" name="conv_pw_pred_3_1_bn/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/Conv2D" out_port_id="0"/>
+		<IR id="95" name="expanded_conv_3/squeeze_excite/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="71" name="expanded_conv_3/expand/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_5/Conv2D" out_port_id="0"/>
+		<IR id="514" name="conv2d_5/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="186" name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_20/activation_21/mul" out_port_id="0"/>
+		<IR id="173" name="activation_20/activation_21/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_23/activation_24/re_lu_16/Relu6" out_port_id="0"/>
+		<IR id="205" name="activation_23/activation_24/re_lu_16/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/BiasAdd" out_port_id="0"/>
+		<IR id="140" name="expanded_conv_4/squeeze_excite/Conv/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_40/activation_41/mul" out_port_id="0"/>
+		<IR id="347" name="activation_40/activation_41/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="462" name="conv_pw_pred_1_2_leaky_relu/LeakyRelu23570" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_17/re_lu_12/Relu6" out_port_id="0"/>
+		<IR id="146" name="activation_17/re_lu_12/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_18/activation_19/mul" out_port_id="0"/>
+		<IR id="163" name="activation_18/activation_19/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_13/activation_14/mul" out_port_id="0"/>
+		<IR id="119" name="activation_13/activation_14/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="537" name="2778627789_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_2_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="592" name="conv_dw_pred_3_2_leaky_relu/LeakyRelu23510" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Relu/Relu" out_port_id="0"/>
+		<IR id="272" name="expanded_conv_7/squeeze_excite/Relu/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="376" name="expanded_conv_10/expand/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="412" name="expanded_conv_10/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1823018232_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_5/re_lu_4/Relu" out_port_id="0"/>
+		<IR id="48" name="activation_5/re_lu_4/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu_6/LeakyRelu" out_port_id="0"/>
+		<IR id="536" name="leaky_re_lu_6/LeakyRelu23470" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="122" name="expanded_conv_4/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="209" name="2781827821_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3/depthwise" out_port_id="0"/>
+		<IR id="470" name="conv_dw_pred_1_3/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/Conv2D" out_port_id="0"/>
+		<IR id="138" name="expanded_conv_4/squeeze_excite/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_6/Reshape" out_port_id="0"/>
+		<IR id="311" name="reshape_6/Reshape/Transpose" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_2/Reshape/shape" out_port_id="0"/>
+		<IR id="133" name="reshape_2/Reshape/Cast_128439_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="49" name="expanded_conv_1/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1812218124_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_8/Conv2D" out_port_id="0"/>
+		<IR id="564" name="conv2d_8/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_28/multiply_9/mul" out_port_id="0"/>
+		<IR id="251" name="activation_28/multiply_9/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_2/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="451" name="2775027753_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="batch_normalization_2/FusedBatchNorm" out_port_id="0"/>
+		<IR id="466" name="batch_normalization_2/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_2_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="522" name="conv_dw_pred_2_2/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="512" name="conv_pw_pred_2_1_leaky_relu/LeakyRelu23462" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="187" name="expanded_conv_5/squeeze_excite/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_40/activation_41/re_lu_26/Relu6" out_port_id="0"/>
+		<IR id="345" name="activation_40/activation_41/re_lu_26/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_3/Conv2D" out_port_id="0"/>
+		<IR id="487" name="conv2d_3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_2_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="454" name="conv_dw_pred_1_2/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_22/add" out_port_id="0"/>
+		<IR id="189" name="expanded_conv_5/squeeze_excite/Conv_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="up_sampling2d_1/mul" out_port_id="0"/>
+		<IR id="560" name="up_sampling2d_1/ResizeNearestNeighbor/Cast_128419_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/Conv2D" out_port_id="0"/>
+		<IR id="69" name="expanded_conv_3/expand/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="35" name="expanded_conv/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1811018112_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="474" name="conv_dw_pred_1_3_leaky_relu/LeakyRelu23514" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Mul/mul" out_port_id="0"/>
+		<IR id="34" name="expanded_conv/squeeze_excite/Mul/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="481" name="predict_conv_1/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="614" name="conv_pw_pred_3_3_bn/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3/Conv2D" out_port_id="0"/>
+		<IR id="476" name="conv_pw_pred_1_3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_27/mul" out_port_id="0"/>
+		<IR id="236" name="activation_27/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_3/mul" out_port_id="0"/>
+		<IR id="33" name="activation_3/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Relu/Relu" out_port_id="0"/>
+		<IR id="316" name="expanded_conv_8/squeeze_excite/Relu/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="44" name="2780627809_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu_1/LeakyRelu" out_port_id="0"/>
+		<IR id="450" name="leaky_re_lu_1/LeakyRelu23474" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/BiasAdd" out_port_id="0"/>
+		<IR id="97" name="expanded_conv_3/squeeze_excite/Conv/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape/Reshape" out_port_id="0"/>
+		<IR id="21" name="reshape/Reshape/Transpose" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Conv/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="4" name="Conv/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_4/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="495" name="batch_normalization_4/FusedBatchNorm/mean/Fused_Mul_1827818280_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="225" name="expanded_conv_6/squeeze_excite/Conv/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_2/Add/add" out_port_id="0"/>
+		<IR id="67" name="expanded_conv_2/Add/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_35/activation_36/mul" out_port_id="0"/>
+		<IR id="304" name="activation_35/activation_36/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/BiasAdd" out_port_id="0"/>
+		<IR id="25" name="expanded_conv/squeeze_excite/Conv/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="598" name="conv_pw_pred_3_2_leaky_relu/LeakyRelu23490" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="concatenate_1/concat" out_port_id="0"/>
+		<IR id="562" name="concatenate_1/concat" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/Conv2D" out_port_id="0"/>
+		<IR id="282" name="expanded_conv_7/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_35/activation_36/add" out_port_id="0"/>
+		<IR id="301" name="activation_35/activation_36/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Relu/Relu" out_port_id="0"/>
+		<IR id="403" name="expanded_conv_10/squeeze_excite/Relu/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_25/activation_26/re_lu_17/Relu6" out_port_id="0"/>
+		<IR id="215" name="activation_25/activation_26/re_lu_17/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/Conv2D" out_port_id="0"/>
+		<IR id="182" name="expanded_conv_5/squeeze_excite/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="batch_normalization_10/FusedBatchNorm" out_port_id="0"/>
+		<IR id="602" name="batch_normalization_10/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="384" name="expanded_conv_10/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="373" name="expanded_conv_10/expand/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1822218224_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Mul/mul" out_port_id="0"/>
+		<IR id="106" name="expanded_conv_3/squeeze_excite/Mul/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/Conv2D" out_port_id="0"/>
+		<IR id="112" name="expanded_conv_4/expand/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="12" name="expanded_conv/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Conv/BiasAdd" out_port_id="0"/>
+		<IR id="184" name="expanded_conv_5/squeeze_excite/Conv/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="616" name="conv_pw_pred_3_3_leaky_relu/LeakyRelu23550" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="predict_conv_3/BiasAdd" out_port_id="0"/>
+		<IR id="620" name="predict_conv_3/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="59" name="expanded_conv_2/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="111" name="expanded_conv_4/expand/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1815018152_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="457" name="conv_pw_pred_1_2_bn/FusedBatchNorm/mean/Fused_Mul_1825818260_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu_5/LeakyRelu" out_port_id="0"/>
+		<IR id="518" name="leaky_re_lu_5/LeakyRelu23542" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="415" name="expanded_conv_10/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="528" name="conv_pw_pred_2_2_bn/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_15/activation_16/mul" out_port_id="0"/>
+		<IR id="129" name="activation_15/activation_16/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/Conv2D" out_port_id="0"/>
+		<IR id="313" name="expanded_conv_8/squeeze_excite/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="199" name="expanded_conv_6/expand/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1817418176_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_48/activation_49/mul" out_port_id="0"/>
+		<IR id="425" name="activation_48/activation_49/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/Conv2D" out_port_id="0"/>
+		<IR id="108" name="expanded_conv_3/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/Add/add" out_port_id="0"/>
+		<IR id="198" name="expanded_conv_5/Add/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_3/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="486" name="batch_normalization_3/FusedBatchNorm/mean/Fused_Mul_1826618268_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_18/activation_19/add" out_port_id="0"/>
+		<IR id="160" name="activation_18/activation_19/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_4/Reshape/shape" out_port_id="0"/>
+		<IR id="221" name="reshape_4/Reshape/Cast_128477_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_17/mul" out_port_id="0"/>
+		<IR id="148" name="activation_17/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="42" name="expanded_conv_1/expand/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3/depthwise" out_port_id="0"/>
+		<IR id="538" name="conv_dw_pred_2_3/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/AvgPool/Mean" out_port_id="0"/>
+		<IR id="350" name="expanded_conv_9/squeeze_excite/AvgPool/Mean" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_48/activation_49/add" out_port_id="0"/>
+		<IR id="422" name="activation_48/activation_49/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_5/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="513" name="batch_normalization_5/FusedBatchNorm/mean/Fused_Mul_1829018292_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="batch_normalization_4/FusedBatchNorm" out_port_id="0"/>
+		<IR id="498" name="batch_normalization_4/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="289" name="expanded_conv_8/expand/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="predict_conv_2/BiasAdd" out_port_id="0"/>
+		<IR id="552" name="predict_conv_2/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="99" name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Conv/Conv2D" out_port_id="0"/>
+		<IR id="2" name="Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="batch_normalization_3/FusedBatchNorm" out_port_id="0"/>
+		<IR id="489" name="batch_normalization_3/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/Add/add" out_port_id="0"/>
+		<IR id="285" name="expanded_conv_7/Add/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Mul/mul" out_port_id="0"/>
+		<IR id="324" name="expanded_conv_8/squeeze_excite/Mul/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="batch_normalization_1/FusedBatchNorm" out_port_id="0"/>
+		<IR id="448" name="batch_normalization_1/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="510" name="conv_pw_pred_2_1_bn/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_15/activation_16/add" out_port_id="0"/>
+		<IR id="126" name="activation_15/activation_16/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="241" name="expanded_conv_6/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="197" name="expanded_conv_5/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="238" name="expanded_conv_6/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1818218184_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/Conv2D" out_port_id="0"/>
+		<IR id="195" name="expanded_conv_5/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/Conv2D" out_port_id="0"/>
+		<IR id="64" name="expanded_conv_2/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_8/multiply_1/mul" out_port_id="0"/>
+		<IR id="77" name="activation_8/multiply_1/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_1/Reshape/shape" out_port_id="0"/>
+		<IR id="90" name="reshape_1/Reshape/Cast_128479_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="reshape_1/Reshape" out_port_id="0"/>
+		<IR id="93" name="reshape_1/Reshape/Transpose" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu_4/LeakyRelu" out_port_id="0"/>
+		<IR id="500" name="leaky_re_lu_4/LeakyRelu23478" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_2/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="587" name="2776227765_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_33/multiply_11/mul" out_port_id="0"/>
+		<IR id="295" name="activation_33/multiply_11/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_45/activation_46/add" out_port_id="0"/>
+		<IR id="388" name="activation_45/activation_46/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_3_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="472" name="conv_dw_pred_1_3/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="548" name="conv_pw_pred_2_3_leaky_relu/LeakyRelu23498" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="436" name="conv_dw_pred_1_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="52" name="expanded_conv_1/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_7/Reshape/shape" out_port_id="0"/>
+		<IR id="351" name="reshape_7/Reshape/Cast_128475_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/Add/add" out_port_id="0"/>
+		<IR id="154" name="expanded_conv_4/Add/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Mul/mul" out_port_id="0"/>
+		<IR id="411" name="expanded_conv_10/squeeze_excite/Mul/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_3/Reshape/shape" out_port_id="0"/>
+		<IR id="177" name="reshape_3/Reshape/Cast_128381_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Conv_1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="420" name="Conv_1/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/expand/Conv2D" out_port_id="0"/>
+		<IR id="374" name="expanded_conv_10/expand/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_38/activation_39/mul" out_port_id="0"/>
+		<IR id="337" name="activation_38/activation_39/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1/Conv2D" out_port_id="0"/>
+		<IR id="508" name="conv_pw_pred_2_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="110" name="expanded_conv_3/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/AvgPool/Mean" out_port_id="0"/>
+		<IR id="307" name="expanded_conv_8/squeeze_excite/AvgPool/Mean" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="360" name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/AvgPool/Mean" out_port_id="0"/>
+		<IR id="220" name="expanded_conv_6/squeeze_excite/AvgPool/Mean" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_10/activation_11/re_lu_8/Relu6" out_port_id="0"/>
+		<IR id="84" name="activation_10/activation_11/re_lu_8/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/squeeze_excite/Mul/mul" out_port_id="0"/>
+		<IR id="193" name="expanded_conv_5/squeeze_excite/Mul/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_15/activation_16/re_lu_11/Relu6" out_port_id="0"/>
+		<IR id="127" name="activation_15/activation_16/re_lu_11/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu/LeakyRelu" out_port_id="0"/>
+		<IR id="432" name="leaky_re_lu/LeakyRelu23522" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="274" name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="281" name="expanded_conv_7/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1819418196_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="328" name="expanded_conv_8/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_2_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="590" name="conv_dw_pred_3_2/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="605" name="2777427777_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/AvgPool/Mean" out_port_id="0"/>
+		<IR id="17" name="expanded_conv/squeeze_excite/AvgPool/Mean" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv/Conv2D" out_port_id="0"/>
+		<IR id="226" name="expanded_conv_6/squeeze_excite/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="155" name="expanded_conv_5/expand/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1816218164_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="137" name="expanded_conv_4/squeeze_excite/Conv/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="355" name="expanded_conv_9/squeeze_excite/Conv/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="255" name="expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu_3/LeakyRelu" out_port_id="0"/>
+		<IR id="491" name="leaky_re_lu_3/LeakyRelu23534" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2/Conv2D" out_port_id="0"/>
+		<IR id="458" name="conv_pw_pred_1_2/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="11" name="2779827801_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Mul/mul" out_port_id="0"/>
+		<IR id="367" name="expanded_conv_9/squeeze_excite/Mul/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="507" name="conv_pw_pred_2_1_bn/FusedBatchNorm/mean/Fused_Mul_1828618288_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_28/activation_29/re_lu_19/Relu6" out_port_id="0"/>
+		<IR id="248" name="activation_28/activation_29/re_lu_19/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/BiasAdd" out_port_id="0"/>
+		<IR id="402" name="expanded_conv_10/squeeze_excite/Conv/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/AvgPool/Mean" out_port_id="0"/>
+		<IR id="394" name="expanded_conv_10/squeeze_excite/AvgPool/Mean" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_25/activation_26/add" out_port_id="0"/>
+		<IR id="214" name="activation_25/activation_26/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_28/activation_29/add" out_port_id="0"/>
+		<IR id="247" name="activation_28/activation_29/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/AvgPool/Mean" out_port_id="0"/>
+		<IR id="263" name="expanded_conv_7/squeeze_excite/AvgPool/Mean" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_12/add" out_port_id="0"/>
+		<IR id="102" name="expanded_conv_3/squeeze_excite/Conv_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1/depthwise" out_port_id="0"/>
+		<IR id="570" name="conv_dw_pred_3_1/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="165" name="2781427817_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="296" name="2777027773_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="up_sampling2d/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR id="493" name="up_sampling2d/ResizeNearestNeighbor" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="329" name="expanded_conv_9/expand/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1821018212_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2/Conv2D" out_port_id="0"/>
+		<IR id="594" name="conv_pw_pred_3_2/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation/activation_1/add" out_port_id="0"/>
+		<IR id="6" name="activation/activation_1/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="273" name="expanded_conv_7/squeeze_excite/Conv_1/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation/activation_1/mul" out_port_id="0"/>
+		<IR id="9" name="activation/activation_1/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="168" name="expanded_conv_5/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_37/re_lu_24/Relu6" out_port_id="0"/>
+		<IR id="321" name="activation_37/re_lu_24/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_6/re_lu_5/Relu" out_port_id="0"/>
+		<IR id="57" name="activation_6/re_lu_5/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_33/activation_34/mul" out_port_id="0"/>
+		<IR id="294" name="activation_33/activation_34/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="batch_normalization_9/FusedBatchNorm" out_port_id="0"/>
+		<IR id="584" name="batch_normalization_9/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="386" name="expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1/depthwise" out_port_id="0"/>
+		<IR id="434" name="conv_dw_pred_1_1/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/Add/add" out_port_id="0"/>
+		<IR id="416" name="expanded_conv_10/Add/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_2_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="460" name="conv_pw_pred_1_2_bn/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="542" name="conv_dw_pred_2_3_leaky_relu/LeakyRelu23574" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="47" name="expanded_conv_1/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="81" name="expanded_conv_3/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="368" name="expanded_conv_9/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1821818220_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/project/Conv2D" out_port_id="0"/>
+		<IR id="239" name="expanded_conv_6/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_42/re_lu_27/Relu6" out_port_id="0"/>
+		<IR id="364" name="activation_42/re_lu_27/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="batch_normalization_8/FusedBatchNorm" out_port_id="0"/>
+		<IR id="566" name="batch_normalization_8/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="166" name="expanded_conv_5/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation/activation_1/re_lu/Relu6" out_port_id="0"/>
+		<IR id="7" name="activation/activation_1/re_lu/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="158" name="expanded_conv_5/expand/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="617" name="predict_conv_3/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="572" name="conv_dw_pred_3_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_40/activation_41/add" out_port_id="0"/>
+		<IR id="344" name="activation_40/activation_41/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Relu/Relu" out_port_id="0"/>
+		<IR id="359" name="expanded_conv_9/squeeze_excite/Relu/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="596" name="conv_pw_pred_3_2_bn/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="121" name="2776627769_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="reshape_8/Reshape/shape" out_port_id="0"/>
+		<IR id="395" name="reshape_8/Reshape/Cast_128451_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="504" name="conv_dw_pred_2_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_47/re_lu_30/Relu6" out_port_id="0"/>
+		<IR id="408" name="activation_47/re_lu_30/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="252" name="2774627749_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="27" name="expanded_conv/squeeze_excite/Conv_1/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_6/Conv2D" out_port_id="0"/>
+		<IR id="532" name="conv2d_6/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/Conv2D" out_port_id="0"/>
+		<IR id="330" name="expanded_conv_9/expand/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="230" name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/Conv2D" out_port_id="0"/>
+		<IR id="326" name="expanded_conv_8/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="100" name="expanded_conv_3/squeeze_excite/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="312" name="expanded_conv_8/squeeze_excite/Conv/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="340" name="expanded_conv_9/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="361" name="expanded_conv_9/squeeze_excite/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="predict_conv_1/Conv2D" out_port_id="0"/>
+		<IR id="482" name="predict_conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="153" name="expanded_conv_4/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="501" name="2782227825_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3/depthwise" out_port_id="0"/>
+		<IR id="606" name="conv_dw_pred_3_3/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu_2/LeakyRelu" out_port_id="0"/>
+		<IR id="468" name="leaky_re_lu_2/LeakyRelu23554" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_47/mul" out_port_id="0"/>
+		<IR id="410" name="activation_47/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="325" name="expanded_conv_8/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1820618208_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="56" name="expanded_conv_2/expand/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_1/depthwise" out_port_id="0"/>
+		<IR id="502" name="conv_dw_pred_2_1/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_2_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="524" name="conv_dw_pred_2_2_leaky_relu/LeakyRelu23530" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/expand/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="68" name="expanded_conv_3/expand/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1813818140_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="38" name="expanded_conv/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/expand/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="114" name="expanded_conv_4/expand/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="418" name="Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_2/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="463" name="batch_normalization_2/FusedBatchNorm/mean/Fused_Mul_1826218264_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="reshape_5/Reshape" out_port_id="0"/>
+		<IR id="267" name="reshape_5/Reshape/Transpose" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="231" name="expanded_conv_6/squeeze_excite/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_4/Reshape" out_port_id="0"/>
+		<IR id="224" name="reshape_4/Reshape/Transpose" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_8/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="563" name="batch_normalization_8/FusedBatchNorm/mean/Fused_Mul_1831818320_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="batch_normalization_7/FusedBatchNorm" out_port_id="0"/>
+		<IR id="557" name="batch_normalization_7/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Conv/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="94" name="expanded_conv_3/squeeze_excite/Conv/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/Conv2D" out_port_id="0"/>
+		<IR id="151" name="expanded_conv_4/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_20/activation_21/re_lu_14/Relu6" out_port_id="0"/>
+		<IR id="171" name="activation_20/activation_21/re_lu_14/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="reshape_3/Reshape" out_port_id="0"/>
+		<IR id="180" name="reshape_3/Reshape/Transpose" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_47/add" out_port_id="0"/>
+		<IR id="407" name="expanded_conv_10/squeeze_excite/Conv_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_1/expand/Conv2D" out_port_id="0"/>
+		<IR id="40" name="expanded_conv_1/expand/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Relu/Relu" out_port_id="0"/>
+		<IR id="26" name="expanded_conv/squeeze_excite/Relu/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="543" name="conv_pw_pred_2_3_bn/FusedBatchNorm/mean/Fused_Mul_1831418316_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_23/activation_24/mul" out_port_id="0"/>
+		<IR id="207" name="activation_23/activation_24/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/AvgPool/Mean" out_port_id="0"/>
+		<IR id="132" name="expanded_conv_4/squeeze_excite/AvgPool/Mean" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="475" name="conv_pw_pred_1_3_bn/FusedBatchNorm/mean/Fused_Mul_1827418276_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_2/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="519" name="2781027813_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="143" name="expanded_conv_4/squeeze_excite/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_43/activation_44/add" out_port_id="0"/>
+		<IR id="378" name="activation_43/activation_44/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="317" name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_7/Conv2D" out_port_id="0"/>
+		<IR id="555" name="conv2d_7/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="61" name="expanded_conv_2/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="574" name="conv_dw_pred_3_1_leaky_relu/LeakyRelu23486" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu_7/LeakyRelu" out_port_id="0"/>
+		<IR id="559" name="leaky_re_lu_7/LeakyRelu23502" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_38/activation_39/add" out_port_id="0"/>
+		<IR id="334" name="activation_38/activation_39/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_12/mul" out_port_id="0"/>
+		<IR id="105" name="activation_12/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="predict_conv_2/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="549" name="predict_conv_2/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="530" name="conv_pw_pred_2_2_leaky_relu/LeakyRelu23538" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_43/multiply_15/mul" out_port_id="0"/>
+		<IR id="382" name="activation_43/multiply_15/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="438" name="conv_dw_pred_1_1_leaky_relu/LeakyRelu23562" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="286" name="expanded_conv_8/expand/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1819818200_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_17/add" out_port_id="0"/>
+		<IR id="145" name="expanded_conv_4/squeeze_excite/Conv_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_1/project/Conv2D" out_port_id="0"/>
+		<IR id="50" name="expanded_conv_1/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d/Conv2D" out_port_id="0"/>
+		<IR id="428" name="conv2d/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_2/depthwise" out_port_id="0"/>
+		<IR id="588" name="conv_dw_pred_3_2/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/squeeze_excite/Conv/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="22" name="expanded_conv/squeeze_excite/Conv/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_1/Conv2D" out_port_id="0"/>
+		<IR id="576" name="conv_pw_pred_3_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Relu/Relu" out_port_id="0"/>
+		<IR id="229" name="expanded_conv_6/squeeze_excite/Relu/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_2/expand/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="53" name="expanded_conv_2/expand/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1812618128_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="445" name="batch_normalization_1/FusedBatchNorm/mean/Fused_Mul_1825018252_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_30/activation_31/mul" out_port_id="0"/>
+		<IR id="260" name="activation_30/activation_31/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="610" name="conv_dw_pred_3_3_leaky_relu/LeakyRelu23526" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_3_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="608" name="conv_dw_pred_3_3/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="546" name="conv_pw_pred_2_3_bn/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="299" name="expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/Conv2D" out_port_id="0"/>
+		<IR id="400" name="expanded_conv_10/squeeze_excite/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="268" name="expanded_conv_7/squeeze_excite/Conv/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="up_sampling2d_1/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR id="561" name="up_sampling2d_1/ResizeNearestNeighbor" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="525" name="conv_pw_pred_2_2_bn/FusedBatchNorm/mean/Fused_Mul_1829818300_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Mul/mul" out_port_id="0"/>
+		<IR id="149" name="expanded_conv_4/squeeze_excite/Mul/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_43/activation_44/re_lu_28/Relu6" out_port_id="0"/>
+		<IR id="379" name="activation_43/activation_44/re_lu_28/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="14" name="expanded_conv/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_13/multiply_3/mul" out_port_id="0"/>
+		<IR id="120" name="activation_13/multiply_3/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="339" name="2780227805_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_1/Conv2D" out_port_id="0"/>
+		<IR id="446" name="conv2d_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/Conv2D" out_port_id="0"/>
+		<IR id="269" name="expanded_conv_7/squeeze_excite/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_7/Reshape" out_port_id="0"/>
+		<IR id="354" name="reshape_7/Reshape/Transpose" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_3/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="611" name="conv_pw_pred_3_3_bn/FusedBatchNorm/mean/Fused_Mul_1835018352_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_45/activation_46/re_lu_29/Relu6" out_port_id="0"/>
+		<IR id="389" name="activation_45/activation_46/re_lu_29/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="194" name="expanded_conv_5/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1817018172_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="up_sampling2d/mul" out_port_id="0"/>
+		<IR id="492" name="up_sampling2d/ResizeNearestNeighbor/Cast_128405_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_48/multiply_17/mul" out_port_id="0"/>
+		<IR id="426" name="activation_48/multiply_17/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/Conv2D" out_port_id="0"/>
+		<IR id="369" name="expanded_conv_9/project/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="predict_conv_1/BiasAdd" out_port_id="0"/>
+		<IR id="484" name="predict_conv_1/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="399" name="expanded_conv_10/squeeze_excite/Conv/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="478" name="conv_pw_pred_1_3_bn/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/AvgPool/Mean" out_port_id="0"/>
+		<IR id="89" name="expanded_conv_3/squeeze_excite/AvgPool/Mean" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/expand/Conv2D" out_port_id="0"/>
+		<IR id="287" name="expanded_conv_8/expand/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="150" name="expanded_conv_4/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1815818160_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="batch_normalization_5/FusedBatchNorm" out_port_id="0"/>
+		<IR id="516" name="batch_normalization_5/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_13/activation_14/add" out_port_id="0"/>
+		<IR id="116" name="activation_13/activation_14/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_6/Reshape/shape" out_port_id="0"/>
+		<IR id="308" name="reshape_6/Reshape/Cast_128473_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_18/activation_19/re_lu_13/Relu6" out_port_id="0"/>
+		<IR id="161" name="activation_18/activation_19/re_lu_13/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_10/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="599" name="batch_normalization_10/FusedBatchNorm/mean/Fused_Mul_1834218344_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="371" name="expanded_conv_9/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/Conv2D" out_port_id="0"/>
+		<IR id="200" name="expanded_conv_6/expand/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="297" name="expanded_conv_8/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="442" name="conv_pw_pred_1_1_bn/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="253" name="expanded_conv_7/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="439" name="conv_pw_pred_1_1_bn/FusedBatchNorm/mean/Fused_Mul_1824618248_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="405" name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_28/activation_29/mul" out_port_id="0"/>
+		<IR id="250" name="activation_28/activation_29/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_38/activation_39/re_lu_25/Relu6" out_port_id="0"/>
+		<IR id="335" name="activation_38/activation_39/re_lu_25/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/Conv2D" out_port_id="0"/>
+		<IR id="356" name="expanded_conv_9/squeeze_excite/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu_10/LeakyRelu" out_port_id="0"/>
+		<IR id="604" name="leaky_re_lu_10/LeakyRelu23494" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/expand/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="202" name="expanded_conv_6/expand/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_3/re_lu_2/Relu6" out_port_id="0"/>
+		<IR id="31" name="activation_3/re_lu_2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_2/depthwise" out_port_id="0"/>
+		<IR id="520" name="conv_dw_pred_2_2/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_30/activation_31/re_lu_20/Relu6" out_port_id="0"/>
+		<IR id="258" name="activation_30/activation_31/re_lu_20/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_9/Conv2D" out_port_id="0"/>
+		<IR id="582" name="conv2d_9/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="210" name="expanded_conv_6/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_3/add" out_port_id="0"/>
+		<IR id="30" name="expanded_conv/squeeze_excite/Conv_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_1/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="45" name="expanded_conv_1/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="predict_conv_3/Conv2D" out_port_id="0"/>
+		<IR id="618" name="predict_conv_3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/squeeze_excite/Mul/mul" out_port_id="0"/>
+		<IR id="237" name="expanded_conv_6/squeeze_excite/Mul/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_42/mul" out_port_id="0"/>
+		<IR id="366" name="activation_42/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_8/Reshape" out_port_id="0"/>
+		<IR id="398" name="reshape_8/Reshape/Transpose" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="383" name="2779427797_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/squeeze_excite/Relu/Relu" out_port_id="0"/>
+		<IR id="141" name="expanded_conv_4/squeeze_excite/Relu/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Conv/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="1" name="Conv/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1810218104_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_4/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="124" name="expanded_conv_4/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_37/add" out_port_id="0"/>
+		<IR id="320" name="expanded_conv_8/squeeze_excite/Conv_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="404" name="expanded_conv_10/squeeze_excite/Conv_1/Conv2D/ReadVariableOp/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_42/add" out_port_id="0"/>
+		<IR id="363" name="expanded_conv_9/squeeze_excite/Conv_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_32/re_lu_21/Relu6" out_port_id="0"/>
+		<IR id="277" name="activation_32/re_lu_21/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_9/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="581" name="batch_normalization_9/FusedBatchNorm/mean/Fused_Mul_1833018332_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="342" name="expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_20/activation_21/add" out_port_id="0"/>
+		<IR id="170" name="activation_20/activation_21/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_7/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="554" name="batch_normalization_7/FusedBatchNorm/mean/Fused_Mul_1830618308_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_6/depthwise/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="212" name="expanded_conv_6/depthwise/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/expand/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="332" name="expanded_conv_9/expand/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/squeeze_excite/Conv/BiasAdd" out_port_id="0"/>
+		<IR id="271" name="expanded_conv_7/squeeze_excite/Conv/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_1/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="433" name="2775827761_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_2/depthwise" out_port_id="0"/>
+		<IR id="452" name="conv_dw_pred_1_2/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="batch_normalization_6/FusedBatchNorm" out_port_id="0"/>
+		<IR id="534" name="batch_normalization_6/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_5/expand/Conv2D" out_port_id="0"/>
+		<IR id="156" name="expanded_conv_5/expand/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_2_3_bn/FusedBatchNorm" out_port_id="0"/>
+		<IR id="540" name="conv_dw_pred_2_3/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="reshape_2/Reshape" out_port_id="0"/>
+		<IR id="136" name="reshape_2/Reshape/Transpose" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_25/activation_26/mul" out_port_id="0"/>
+		<IR id="217" name="activation_25/activation_26/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_10/activation_11/add" out_port_id="0"/>
+		<IR id="83" name="activation_10/activation_11/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="leaky_re_lu_8/LeakyRelu" out_port_id="0"/>
+		<IR id="568" name="leaky_re_lu_8/LeakyRelu23558" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/project/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="284" name="expanded_conv_7/project/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_23/multiply_7/mul" out_port_id="0"/>
+		<IR id="208" name="activation_23/multiply_7/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_3/Conv2D" out_port_id="0"/>
+		<IR id="544" name="conv_pw_pred_2_3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_8/activation_9/mul" out_port_id="0"/>
+		<IR id="76" name="activation_8/activation_9/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_22/mul" out_port_id="0"/>
+		<IR id="192" name="activation_22/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_3_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="480" name="conv_pw_pred_1_3_leaky_relu/LeakyRelu23566" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_27/re_lu_18/Relu6" out_port_id="0"/>
+		<IR id="234" name="activation_27/re_lu_18/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_1_1_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="444" name="conv_pw_pred_1_1_leaky_relu/LeakyRelu23518" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_3_1/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="569" name="2775427757_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="107" name="expanded_conv_3/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1814618148_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_23/activation_24/add" out_port_id="0"/>
+		<IR id="204" name="activation_23/activation_24/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_3_2/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="593" name="conv_pw_pred_3_2_bn/FusedBatchNorm/mean/Fused_Mul_1833818340_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_32/mul" out_port_id="0"/>
+		<IR id="279" name="activation_32/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/squeeze_excite/Relu/Relu" out_port_id="0"/>
+		<IR id="98" name="expanded_conv_3/squeeze_excite/Relu/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_7/expand/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="245" name="expanded_conv_7/expand/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_10/activation_11/mul" out_port_id="0"/>
+		<IR id="86" name="activation_10/activation_11/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/Conv/depthwise" out_port_id="0"/>
+		<IR id="79" name="expanded_conv_3/depthwise/Conv/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_9/squeeze_excite/Conv/BiasAdd" out_port_id="0"/>
+		<IR id="358" name="expanded_conv_9/squeeze_excite/Conv/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Conv_1/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="417" name="Conv_1/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1823418236_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv/BiasAdd" out_port_id="0"/>
+		<IR id="315" name="expanded_conv_8/squeeze_excite/Conv/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_2/project/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="63" name="expanded_conv_2/project/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1813418136_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_3/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="78" name="2778227785_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_10/Conv2D" out_port_id="0"/>
+		<IR id="600" name="conv2d_10/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_dw_pred_1_2_leaky_relu/LeakyRelu" out_port_id="0"/>
+		<IR id="456" name="conv_dw_pred_1_2_leaky_relu/LeakyRelu23506" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv_pw_pred_2_2/Conv2D" out_port_id="0"/>
+		<IR id="526" name="conv_pw_pred_2_2/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_38/multiply_13/mul" out_port_id="0"/>
+		<IR id="338" name="activation_38/multiply_13/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_6/Conv2D/ReadVariableOp" out_port_id="0"/>
+		<IR id="531" name="batch_normalization_6/FusedBatchNorm/mean/Fused_Mul_1830218304_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="activation_45/activation_46/mul" out_port_id="0"/>
+		<IR id="391" name="activation_45/activation_46/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_2/depthwise/Conv/depthwise/ReadVariableOp" out_port_id="0"/>
+		<IR id="58" name="2777827781_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="318" name="expanded_conv_8/squeeze_excite/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="activation_27/add" out_port_id="0"/>
+		<IR id="233" name="expanded_conv_6/squeeze_excite/Conv_1/BiasAdd/Add/Fused_Add_" out_port_id="2"/>
+	</map>
+</mapping>

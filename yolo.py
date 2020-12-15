@@ -28,7 +28,8 @@ def intersection_over_union(box_1, box_2):
 
 #class_idをラベルに変換する辞書
 idx2label = {0:"zero",1:"one",2:"two",3:"three",4:"four",5:"five",6:"three_v2",7:"fit",8:"fox",9:"ok",10:"go",11:"little_finger"}
-anchors = [151,288, 171,191, 209,296, 105,90, 120,136, 126,181, 68,101, 86,129, 98,162]
+anchors = [151,288, 171,191, 209,296, 105,90, 120,136, 126,181, 68,101, 86,129, 98,162]#mnsy
+#anchors = [72,79, 93,159, 96,106, 56,68, 56,47, 70,105, 37,55, 45,75, 56,90]#mnsy224
 anchors = np.array(anchors).reshape(-1, 2)
 
 #YOLOv3でジェスチャを認識するクラス
@@ -36,8 +37,8 @@ class YOLO:
     def __init__(self,use_device):
         self.plugin_dir = None
         self.plugin = IEPlugin(use_device,plugin_dirs=self.plugin_dir)
-        self.model_xml = "./weights/mnsytest.xml"
-        self.model_bin = "./weights/mnsytest.bin"
+        self.model_xml = "./weights/mnsy.xml"
+        self.model_bin = "./weights/mnsy.bin"
         self.net = IENetwork(model=self.model_xml,weights=self.model_bin)
         self.exec_net = self.plugin.load(network=self.net)
         self.cnt = 0 #stopジェスチャのカウント
