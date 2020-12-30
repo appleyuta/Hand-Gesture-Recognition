@@ -11,6 +11,7 @@ import threading
 from serial_device import ir_serial #irMagicianとの通信用
 
 
+
 #IoU計算関数
 def intersection_over_union(box_1, box_2):
     width_of_overlap_area = min(box_1[2], box_2[2]) - max(box_1[0], box_2[0])
@@ -28,8 +29,8 @@ def intersection_over_union(box_1, box_2):
 
 #class_idをラベルに変換する辞書
 idx2label = {0:"zero",1:"one",2:"two",3:"three",4:"four",5:"five",6:"three_v2",7:"fit",8:"fox",9:"ok",10:"go",11:"little_finger"}
-anchors = [151,288, 171,191, 209,296, 105,90, 120,136, 126,181, 68,101, 86,129, 98,162]#mnsy
-#anchors = [72,79, 93,159, 96,106, 56,68, 56,47, 70,105, 37,55, 45,75, 56,90]#mnsy224
+anchors = [151,288, 171,191, 209,296, 105,90, 120,136, 126,181, 68,101, 86,129, 98,162]
+#anchors = [72,79, 93,159, 96,106, 56,68, 56,47, 70,105, 37,55, 45,75, 56,90]
 anchors = np.array(anchors).reshape(-1, 2)
 
 #YOLOv3でジェスチャを認識するクラス
@@ -65,6 +66,8 @@ class YOLO:
         self.image_texture = None
         self.detect_gesture_name = ""
         self.frame_counter = 0
+        self.diff_threshold = 100#ジェスチャ移動距離閾値
+        self.tracking_flag = False
 
     def set_exec_f(self,exec_f):
         self.exec_f = exec_f #ExecuteFrame
@@ -90,6 +93,7 @@ class YOLO:
         end_flag_y = 0
         speed_count = 0#仮
         speed_sum = 0#仮
+        #self.beep()
         while cap.isOpened():
             ret, frame = cap.read()
             #左右反転(鏡)
@@ -134,6 +138,7 @@ class YOLO:
                             objects[3][j] = 0
                 velocity_x = 0
                 velocity_y = 0
+
                 for i in range(len(objects[0])):
                     if objects[3][i] > 0.3:
                         #print(objects)
@@ -143,10 +148,13 @@ class YOLO:
                         if self.detect_class.__len__() == 9:
                             #class_idのmedianを計算して検出クラスを安定させる
                             median_class_id = np.median(self.detect_class)
+                            self.tracking_flag = True
                             frame = cv2.rectangle(frame,(objects[1][i][0],objects[1][i][1]),(objects[1][i][2],objects[1][i][3]),(0,255,0),3)
                             frame = cv2.putText(frame,idx2label[median_class_id],(objects[1][i][0]-3,objects[1][i][1]-3), cv2.FONT_HERSHEY_PLAIN, 3, (0, 0, 255),3)
                             frame = cv2.line(frame,(x_center,y_center),(x_center+1,y_center+1),(0,255,0),3)
                             time_stamp = time.time()
+                            
+                            
                             
                             if self.before_data != None and t != 0:
                                 #速度を計算
@@ -183,30 +191,31 @@ class YOLO:
                                 self.x_start2end_count = 0
                                 start_flag_x = 0
                                 self.cnt = 0
+                                
                             #ジェスチャ開始後、数フレームの間待機する
                             if self.x_start2end_count != None:
                                 self.x_start2end_count += 1
-                            
+                                
                             if self.start_point_x != None and self.end_point_x == None and self.x_start2end_count > 10 and abs(velocity_x) < 90:
                                 self.end_point_x = (x_center,median_class_id)
                                 self.x_start2end_count = None #初期化
-                            
+                                
                             if self.end_point_x != None and self.cnt > 3:
                                 diff = self.start_point_x[0] - self.end_point_x[0]
                                 if self.start_point_x[2] == median_class_id:
                                     if diff > 0:
-                                        if self.start_point_x[1] > 0 and abs(diff) > 100:
+                                        if self.start_point_x[1] > 0 and abs(diff) > self.diff_threshold:
                                             print(idx2label[median_class_id],"left")
                                             self.detect_gesture_name = idx2label[median_class_id] + " left"
-                                            self.cnt = 0
+                                            self.frame_counter = 0
                                             threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,4)).start()
                                     else:
-                                        if self.start_point_x[1] < 0 and abs(diff) > 100:
+                                        if self.start_point_x[1] < 0 and abs(diff) > self.diff_threshold:
                                             print(idx2label[median_class_id],"right")
                                             self.detect_gesture_name = idx2label[median_class_id] + " right"
-                                            self.cnt = 0
+                                            self.frame_counter = 0
                                             threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,3)).start()
-                            
+                                            
                                 start_flag_x = 0
                                 self.start_point_x = None
                                 self.end_point_x = None
@@ -233,18 +242,17 @@ class YOLO:
                                 diff = self.start_point_y[0] - self.end_point_y[0]
                                 if self.start_point_y[2] == median_class_id:
                                     if diff > 0:
-                                        if self.start_point_y[1] > 0 and abs(diff) > 100:
+                                        if self.start_point_y[1] > 0 and abs(diff) > self.diff_threshold:
                                             print(idx2label[median_class_id],"up")
                                             self.detect_gesture_name = idx2label[median_class_id] + " up"
-                                            self.cnt = 0
+                                            self.frame_counter = 0
                                             threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,1)).start()
                                     else:
-                                        if self.start_point_y[1] < 0 and abs(diff) > 100:
+                                        if self.start_point_y[1] < 0 and abs(diff) > self.diff_threshold:
                                             print(idx2label[median_class_id],"down")
                                             self.detect_gesture_name = idx2label[median_class_id] + " down"
-                                            self.cnt = 0
-                                            threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,2)).start()
-                            
+                                            self.frame_counter = 0
+                                            
                                 start_flag_y = 0
                                 end_flag_y = 0
                                 self.start_point_y = None
@@ -257,9 +265,11 @@ class YOLO:
                                 else:
                                     self.cnt = 0
                                     
+                            #if self.cnt > (1/t)/2:
                             if self.cnt > 30:
                                 print(idx2label[median_class_id],"stop")
                                 self.detect_gesture_name = idx2label[median_class_id] + " stop"
+                                self.frame_counter = 0
                                 threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,0)).start()
                                 self.cnt = 0
                             
@@ -267,7 +277,7 @@ class YOLO:
                             self.before_data = (x_center,y_center,median_class_id)
                         #median_filterで計算するための配列を更新
                         if self.detect_class.__len__() < 9:
-                            self.detected_data.append([x_center,y_center,0,0,class_id])
+                            self.detected_data = [[x_center,y_center,0,0,class_id] for _ in range(9)]
                             #最初のみすべてのデータを現在のclass_idでfillする
                             self.detect_class = np.array([class_id for _ in range(9)])
                         else:
@@ -282,7 +292,9 @@ class YOLO:
                         #print("カウント:",self.cnt)
                         #print("フラッグx:",start_flag_x)
                         #print("フラッグy:",start_flag_y)
-                    
+                    else:
+                        self.tracking_flag = False
+                
                 if time.time() - time_stamp > 1:
                     #print("reset")
                     self.start_point_x = None
@@ -295,12 +307,12 @@ class YOLO:
                     self.cnt = 0
                 
             self.frame_counter += 1
-            if self.frame_counter > 60:
+            if self.frame_counter > (1/t):
                 self.detect_gesture_name = ""
                 self.frame_counter = 0
 
             #frame = cv2.putText(frame,str(round(1/t,1))+"fps",(30,40),cv2.FONT_HERSHEY_PLAIN,3,(0,0,255),3)
-            frame = cv2.putText(frame,self.detect_gesture_name,(30,80),cv2.FONT_HERSHEY_PLAIN,7,(0,0,255),3)            
+            frame = cv2.putText(frame,self.detect_gesture_name,(0,int(cap_h//10)),cv2.FONT_HERSHEY_PLAIN,cap_h//100,(0,0,255),3)            
 
             #表示サイズにリサイズ
             frame = cv2.resize(frame,(600,400))
@@ -435,11 +447,11 @@ class YOLO:
                         #ジェスチャ開始後、数フレームの間待機する
                         if self.x_start2end_count != None:
                             self.x_start2end_count += 1
-                        
+                            
                         if self.start_point_x != None and self.end_point_x == None and self.x_start2end_count > 10 and abs(velocity_x) < 90:
                             self.end_point_x = (x_center,median_class_id)
                             self.x_start2end_count = None #初期化
-                        
+                            
                         if self.end_point_x != None and self.cnt > 3:
                             diff = self.start_point_x[0] - self.end_point_x[0]
                             if self.start_point_x[2] == median_class_id:
@@ -447,15 +459,15 @@ class YOLO:
                                     if self.start_point_x[1] > 0 and abs(diff) > 100:
                                         print(idx2label[median_class_id],"left")
                                         self.detect_gesture_name = idx2label[median_class_id] + " left"
-                                        self.cnt = 0
+                                        self.frame_counter = 0
                                         threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,4)).start()
                                 else:
                                     if self.start_point_x[1] < 0 and abs(diff) > 100:
                                         print(idx2label[median_class_id],"right")
                                         self.detect_gesture_name = idx2label[median_class_id] + " right"
-                                        self.cnt = 0
+                                        self.frame_counter = 0
                                         threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,3)).start()
-                        
+                                        
                             self.start_flag_x = 0
                             self.start_point_x = None
                             self.end_point_x = None
@@ -470,8 +482,7 @@ class YOLO:
                         #ジェスチャ開始後、数フレームの間待機する
                         if self.y_start2end_count != None:
                             self.y_start2end_count += 1
-
-                        
+                            
                         #if self.start_point_y != None and self.end_point_y == None and abs(velocity_y) < 90:
                         if self.start_point_y != None and self.end_point_y == None and self.y_start2end_count > 10 and abs(velocity_y) < 90:
                             self.end_point_y = (y_center,median_class_id)
@@ -485,15 +496,15 @@ class YOLO:
                                     if self.start_point_y[1] > 0 and abs(diff) > 100:
                                         print(idx2label[median_class_id],"up")
                                         self.detect_gesture_name = idx2label[median_class_id] + " up"
-                                        self.cnt = 0
+                                        self.frame_counter = 0
                                         threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,1)).start()
                                 else:
                                     if self.start_point_y[1] < 0 and abs(diff) > 100:
                                         print(idx2label[median_class_id],"down")
                                         self.detect_gesture_name = idx2label[median_class_id] + " down"
-                                        self.cnt = 0
+                                        self.frame_counter = 0
                                         threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,2)).start()
-                        
+                                        
                             self.start_flag_y = 0
                             end_flag_y = 0
                             self.start_point_y = None
@@ -506,9 +517,11 @@ class YOLO:
                             else:
                                 self.cnt = 0
                                 
+                        #if self.cnt > 30:
                         if self.cnt > 30:
                             print(idx2label[median_class_id],"stop")
                             self.detect_gesture_name = idx2label[median_class_id] + " stop"
+                            self.frame_counter = 0
                             threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,0)).start()
                             self.cnt = 0
                         
@@ -516,14 +529,14 @@ class YOLO:
                         self.before_data = (x_center,y_center,median_class_id)
                     #median_filterで計算するための配列を更新
                     if self.detect_class.__len__() < 9:
-                        self.detected_data.append([x_center,y_center,0,0,class_id])
+                        self.detected_data = [[x_center,y_center,0,0,class_id] for _ in range(9)]
                         #最初のみすべてのデータを現在のclass_idでfillする
                         self.detect_class = np.array([class_id for _ in range(9)])
                     else:
                         self.detected_data.pop(0)
                         self.detected_data.append([x_center,y_center,velocity_x,velocity_y,median_class_id])
                         self.detect_class = np.append(self.detect_class[1:],class_id)
-                    
+
                     #print(np.average(self.detected_data,axis=0)[3])
 
 
@@ -544,14 +557,17 @@ class YOLO:
                 self.cnt = 0
                 
             self.frame_counter += 1
-            if self.frame_counter > 60:
+            #print((1/t)*1.5)
+            print(self.frame_counter)
+            if self.frame_counter > (1/t):
                 self.detect_gesture_name = ""
                 self.frame_counter = 0
 
             #frame = cv2.putText(frame,str(round(1/t,1))+"fps",(30,40),cv2.FONT_HERSHEY_PLAIN,3,(0,0,255),3)
-            frame = cv2.putText(frame,self.detect_gesture_name,(30,80),cv2.FONT_HERSHEY_PLAIN,7,(0,0,255),3)            
+            frame = cv2.putText(frame,self.detect_gesture_name,(0,int(cap_h//10)),cv2.FONT_HERSHEY_PLAIN,cap_h//100,(0,0,255),3)            
             #表示サイズにリサイズ
             #frame = cv2.resize(frame,(600,400))
+
         return frame
 
     #ジェスチャに対応した赤外線信号を発信する
@@ -594,6 +610,7 @@ class YOLO:
         ir_serial.write("p\r\n".encode())
         msg = ir_serial.readline()
         print(msg)
+
 
 #オブジェクトを生成
 yolo_obj = YOLO("CPU")
