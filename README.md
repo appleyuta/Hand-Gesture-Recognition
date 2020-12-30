@@ -48,7 +48,8 @@ python guiapp.pyのように実行できます。
 ## 必要なライブラリ
 Windowsで実行する場合はrequirements_windows.txtに書かれたライブラリが必要です。  
 それ以外のOSでの実行にはrequirements.txtに書かれたライブラリが必要です。  
-requirements.txtに書かれたライブラリの他にOpenVINOの実行環境が必要です。
+requirements.txtに書かれたライブラリの他にOpenVINOの実行環境が必要です。  
+このアプリで家電を操作するには大宮技研が開発したirMagicianをpcに接続する必要があります。
 
 ## Windowsにおけるdecodeエラー対処
 WindowsでKivyを実行する際に下記のエラーが出る場合があります。

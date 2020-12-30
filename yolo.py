@@ -198,11 +198,13 @@ class YOLO:
                                         if self.start_point_x[1] > 0 and abs(diff) > 100:
                                             print(idx2label[median_class_id],"left")
                                             self.detect_gesture_name = idx2label[median_class_id] + " left"
+                                            self.cnt = 0
                                             threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,4)).start()
                                     else:
                                         if self.start_point_x[1] < 0 and abs(diff) > 100:
                                             print(idx2label[median_class_id],"right")
                                             self.detect_gesture_name = idx2label[median_class_id] + " right"
+                                            self.cnt = 0
                                             threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,3)).start()
                             
                                 start_flag_x = 0
@@ -234,11 +236,13 @@ class YOLO:
                                         if self.start_point_y[1] > 0 and abs(diff) > 100:
                                             print(idx2label[median_class_id],"up")
                                             self.detect_gesture_name = idx2label[median_class_id] + " up"
+                                            self.cnt = 0
                                             threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,1)).start()
                                     else:
                                         if self.start_point_y[1] < 0 and abs(diff) > 100:
                                             print(idx2label[median_class_id],"down")
                                             self.detect_gesture_name = idx2label[median_class_id] + " down"
+                                            self.cnt = 0
                                             threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,2)).start()
                             
                                 start_flag_y = 0
@@ -443,11 +447,13 @@ class YOLO:
                                     if self.start_point_x[1] > 0 and abs(diff) > 100:
                                         print(idx2label[median_class_id],"left")
                                         self.detect_gesture_name = idx2label[median_class_id] + " left"
+                                        self.cnt = 0
                                         threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,4)).start()
                                 else:
                                     if self.start_point_x[1] < 0 and abs(diff) > 100:
                                         print(idx2label[median_class_id],"right")
                                         self.detect_gesture_name = idx2label[median_class_id] + " right"
+                                        self.cnt = 0
                                         threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,3)).start()
                         
                             self.start_flag_x = 0
@@ -479,11 +485,13 @@ class YOLO:
                                     if self.start_point_y[1] > 0 and abs(diff) > 100:
                                         print(idx2label[median_class_id],"up")
                                         self.detect_gesture_name = idx2label[median_class_id] + " up"
+                                        self.cnt = 0
                                         threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,1)).start()
                                 else:
                                     if self.start_point_y[1] < 0 and abs(diff) > 100:
                                         print(idx2label[median_class_id],"down")
                                         self.detect_gesture_name = idx2label[median_class_id] + " down"
+                                        self.cnt = 0
                                         threading.Thread(target=self.Infrared_signal_control,args=(median_class_id,2)).start()
                         
                             self.start_flag_y = 0

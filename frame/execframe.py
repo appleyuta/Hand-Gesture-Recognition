@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import font
 from PIL import Image,ImageTk
 from yolo import yolo_obj
-from ssd import ssd_obj
 
 class ExecuteFrame(tk.Frame):
     def __init__(self,start_f,master=None,**kwargs):
@@ -15,7 +14,6 @@ class ExecuteFrame(tk.Frame):
         self.button.grid()
         self.parent = start_f #StartFrame
         self.model = yolo_obj
-        #self.model = ssd_obj
         self.model.set_exec_f(self)
         self.checker = None
         self.Start()
