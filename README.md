@@ -32,7 +32,7 @@ SSDLiteはMNSYと比べて高速で実行可能であるが、精度が著しく
 
 
 ## デモ
-guiapp.pyの実行デモ
+Kivy_guiapp.pyの実行デモ
 
 ![result](https://github.com/appleyuta/Hand-Gesture-Recognition/blob/main/demo.gif)
 
