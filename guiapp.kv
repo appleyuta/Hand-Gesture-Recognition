@@ -108,6 +108,8 @@
             on_release:
                 root.manager.current = 'setting'
                 root.manager.transition.direction = 'right'
+                root.manager.get_screen('gesregister').ids.ir_name.update()
+                root.manager.get_screen('gesregister').update_treeview()
         
         BoxLayout:
             orientation: 'horizontal'
@@ -126,7 +128,9 @@
             text: '登録'
             font_size: sp(68)
             size_hint_y: 0.3
-            on_release: root.irRegister()
+            on_release:
+                root.irRegister()
+                #root.manager.get_screen('gesregister').ids.ir_name.update()
 
         Label:
             font_size: sp(25)
@@ -157,7 +161,9 @@
             font_size: sp(30)
             text: '選択された項目を削除'
             size_hint_y: 0.15
-            on_release: root.deletecheck()
+            on_release:
+                root.deletecheck()
+                #root.manager.get_screen('gesregister').ids.ir_name.update()
         
 <MessagePopup>:
     anchor_x: 'center'
@@ -260,7 +266,7 @@
             text: '登録'
             font_size: sp(68)
             size_hint_y: 0.3
-            on_release: root.Register()
+            on_release: root.Register()#, root.ids.ir_name.update()
         
         Label:
             text: '登録済みジェスチャ一覧'
@@ -290,7 +296,7 @@
             text: '選択された項目を削除'
             font_size: sp(30)
             size_hint_y: 0.15
-            on_release: root.deletecheck()
+            on_release: root.deletecheck()#, root.ids.ir_name.update()
 
 
 <EnvironmentSettingScreen>:
