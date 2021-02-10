@@ -48,6 +48,7 @@ class GestureRegisterScreen(Screen):
         cursor = connection.cursor()
         try:
             cursor.execute("CREATE TABLE IF NOT EXISTS sample (id INTEGER PRIMARY KEY, irname TEXT,postscale INTEGER, freq INTEGER, data TEXT,format TEXT,target_id INTEGER)")
+            cursor.execute("UPDATE sample SET target_id = null where target_id = :target_id",{"id":pkey_id,"target_id":target_id})
             cursor.execute("UPDATE sample SET target_id = :target_id where id = :id",{"id":pkey_id,"target_id":target_id})
         except sqlite3.Error as e:
             print("sqlite3.Error occured:",e.args[0])
