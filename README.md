@@ -1,5 +1,6 @@
 # Hand Gesture Recognition
 Hand Gestureを用いた家電操作アプリです。
+Raspberry Pi版は[こちら](https://github.com/appleyuta/RaspberryPi-HGR-System)。
 
 ## 使用したネットワーク
 このアプリケーションで使用したネットワークについて解説する。  
